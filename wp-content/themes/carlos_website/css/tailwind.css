@@ -1,0 +1,12 @@
+/**
+ * Theme Name:        Carlos's Personal Website
+ * Theme URI:         https://carlosmiranda.com/
+ * Description:       Site da do Carlos!
+ * Version:           0.0.0
+ * Author:            Carlos Eduardo
+ * Author URI:        https://carlosmiranda.com/
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
