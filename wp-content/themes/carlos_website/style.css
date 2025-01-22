@@ -562,6 +562,114 @@ video {
   display: none;
 }
 
+@font-face {
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 100;
+
+  src: url('./font/Poppins/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 200;
+
+  src: url('./font/Poppins/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 300;
+
+  src: url('./font/Poppins/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 400;
+
+  src: url('./font/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 500;
+
+  src: url('./font/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 600;
+
+  src: url('./font/Poppins/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 700;
+
+  src: url('./font/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 800;
+
+  src: url('./font/Poppins/Poppins-ExtraBold.ttfs') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 900;
+
+  src: url('./font/Poppins/Poppins-Black.ttf') format('truetype');
+}
+
 .container {
   width: 100%;
 }
@@ -678,12 +786,45 @@ video {
   height: 100% !important;
 }
 
+.size-6 {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
 .resize {
   resize: both !important;
 }
 
+.flex-col {
+  flex-direction: column !important;
+}
+
+.items-center {
+  align-items: center !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
 .gap-3 {
   gap: 0.75rem !important;
+}
+
+.gap-6 {
+  gap: 1.5rem !important;
+}
+
+.gap-4 {
+  gap: 1rem !important;
+}
+
+.gap-2 {
+  gap: 0.5rem !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
 }
 
 .border {
@@ -695,8 +836,57 @@ video {
   background-color: rgb(38 38 38 / var(--tw-bg-opacity, 1)) !important;
 }
 
+.p-1 {
+  padding: 0.25rem !important;
+}
+
+.p-2 {
+  padding: 0.5rem !important;
+}
+
+.px-3 {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+.px-8 {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+.py-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.pb-4 {
+  padding-bottom: 1rem !important;
+}
+
+.pt-8 {
+  padding-top: 2rem !important;
+}
+
 .text-center {
   text-align: center !important;
+}
+
+.font-poppins {
+  font-family: Poppins, serif !important;
+}
+
+.text-2xl {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
+
+.text-base {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+}
+
+.font-bold {
+  font-weight: 700 !important;
 }
 
 .uppercase {
@@ -709,6 +899,16 @@ video {
 
 .italic {
   font-style: italic !important;
+}
+
+.text-primary-carlos {
+  --tw-text-opacity: 1 !important;
+  color: rgb(151 71 255 / var(--tw-text-opacity, 1)) !important;
+}
+
+.text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
 .underline {
@@ -725,4 +925,33 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter !important;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
   transition-duration: 150ms !important;
+}
+
+.hover\:bg-background-black:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(24 24 24 / var(--tw-bg-opacity, 1)) !important;
+}
+
+@media (min-width: 640px) {
+  .sm\:flex {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:block {
+    display: block !important;
+  }
+
+  .md\:flex {
+    display: flex !important;
+  }
+
+  .md\:hidden {
+    display: none !important;
+  }
+
+  .md\:flex-row {
+    flex-direction: row !important;
+  }
 }
