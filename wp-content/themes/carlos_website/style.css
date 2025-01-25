@@ -724,12 +724,64 @@ video {
   position: fixed !important;
 }
 
+.absolute {
+  position: absolute !important;
+}
+
 .relative {
   position: relative !important;
 }
 
 .sticky {
   position: sticky !important;
+}
+
+.right-0 {
+  right: 0px !important;
+}
+
+.right-4 {
+  right: 1rem !important;
+}
+
+.top-0 {
+  top: 0px !important;
+}
+
+.top-4 {
+  top: 1rem !important;
+}
+
+.right-5 {
+  right: 1.25rem !important;
+}
+
+.top-5 {
+  top: 1.25rem !important;
+}
+
+.top-6 {
+  top: 1.5rem !important;
+}
+
+.right-6 {
+  right: 1.5rem !important;
+}
+
+.right-7 {
+  right: 1.75rem !important;
+}
+
+.top-7 {
+  top: 1.75rem !important;
+}
+
+.right-8 {
+  right: 2rem !important;
+}
+
+.top-8 {
+  top: 2rem !important;
 }
 
 .isolate {
@@ -751,6 +803,14 @@ video {
 
 .mt-1 {
   margin-top: 0.25rem !important;
+}
+
+.mt-4 {
+  margin-top: 1rem !important;
+}
+
+.mt-5 {
+  margin-top: 1.25rem !important;
 }
 
 .block {
@@ -781,14 +841,55 @@ video {
   display: none !important;
 }
 
+.size-6 {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
 .size-full {
   width: 100% !important;
   height: 100% !important;
 }
 
-.size-6 {
-  width: 1.5rem !important;
-  height: 1.5rem !important;
+.size-8 {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.size-16 {
+  width: 4rem !important;
+  height: 4rem !important;
+}
+
+.size-12 {
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
+.size-14 {
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+}
+
+.size-10 {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+}
+
+.h-full {
+  height: 100% !important;
+}
+
+.h-screen {
+  height: 100vh !important;
+}
+
+.w-full {
+  width: 100% !important;
+}
+
+.w-screen {
+  width: 100vw !important;
 }
 
 .resize {
@@ -799,28 +900,40 @@ video {
   flex-direction: column !important;
 }
 
+.flex-col-reverse {
+  flex-direction: column-reverse !important;
+}
+
 .items-center {
   align-items: center !important;
+}
+
+.justify-center {
+  justify-content: center !important;
 }
 
 .justify-between {
   justify-content: space-between !important;
 }
 
-.gap-3 {
-  gap: 0.75rem !important;
+.gap-2 {
+  gap: 0.5rem !important;
 }
 
-.gap-6 {
-  gap: 1.5rem !important;
+.gap-3 {
+  gap: 0.75rem !important;
 }
 
 .gap-4 {
   gap: 1rem !important;
 }
 
-.gap-2 {
-  gap: 0.5rem !important;
+.gap-5 {
+  gap: 1.25rem !important;
+}
+
+.gap-6 {
+  gap: 1.5rem !important;
 }
 
 .rounded {
@@ -840,8 +953,8 @@ video {
   padding: 0.25rem !important;
 }
 
-.p-2 {
-  padding: 0.5rem !important;
+.p-4 {
+  padding: 1rem !important;
 }
 
 .px-3 {
@@ -863,12 +976,20 @@ video {
   padding-bottom: 1rem !important;
 }
 
+.pt-4 {
+  padding-top: 1rem !important;
+}
+
 .pt-8 {
   padding-top: 2rem !important;
 }
 
 .text-center {
   text-align: center !important;
+}
+
+.align-middle {
+  vertical-align: middle !important;
 }
 
 .font-poppins {
@@ -880,9 +1001,19 @@ video {
   line-height: 2rem !important;
 }
 
+.text-xl {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+}
+
 .text-base {
   font-size: 1rem !important;
   line-height: 1.5rem !important;
+}
+
+.text-3xl {
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
 }
 
 .font-bold {
@@ -901,6 +1032,10 @@ video {
   font-style: italic !important;
 }
 
+.leading-none {
+  line-height: 1 !important;
+}
+
 .text-primary-carlos {
   --tw-text-opacity: 1 !important;
   color: rgb(151 71 255 / var(--tw-text-opacity, 1)) !important;
@@ -913,6 +1048,10 @@ video {
 
 .underline {
   text-decoration-line: underline !important;
+}
+
+.line-through {
+  text-decoration-line: line-through !important;
 }
 
 .filter {
@@ -932,17 +1071,7 @@ video {
   background-color: rgb(24 24 24 / var(--tw-bg-opacity, 1)) !important;
 }
 
-@media (min-width: 640px) {
-  .sm\:flex {
-    display: flex !important;
-  }
-}
-
 @media (min-width: 768px) {
-  .md\:block {
-    display: block !important;
-  }
-
   .md\:flex {
     display: flex !important;
   }
@@ -951,7 +1080,8 @@ video {
     display: none !important;
   }
 
-  .md\:flex-row {
-    flex-direction: row !important;
+  .md\:text-2xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
   }
 }
