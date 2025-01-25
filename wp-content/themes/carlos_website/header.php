@@ -12,8 +12,8 @@
 </head>
 
 <body class='bg-background'>
-    <header class='pt-8 px-8 pb-4 flex justify-between items-center text-white'>
-        <h2 class='text-xl leading-none md:text-2xl font-bold'>Carlos <span class='text-primary-carlos'>Miranda</span></h2>
+    <header class='pt-8 px-8 pb-4 flex justify-between items-center text-white border-b-2 border-light-grey'>
+        <h2 class='select-none text-xl leading-none md:text-2xl font-bold'>Carlos <span class='text-primary-carlos'>Miranda</span></h2>
         <!-- BURGUER BUTTON -->
         <button id='burguerButton' class='md:hidden hover:bg-background-black p-1 rounded'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         'primary-carlos': '#9747FF',
         'background': '#262626',
-        'background-black': '#181818'
+        'background-black': '#181818',
+        'light-grey': '#414141'
       },
     },
   },

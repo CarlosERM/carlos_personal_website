@@ -740,44 +740,12 @@ video {
   right: 0px !important;
 }
 
-.right-4 {
-  right: 1rem !important;
+.right-8 {
+  right: 2rem !important;
 }
 
 .top-0 {
   top: 0px !important;
-}
-
-.top-4 {
-  top: 1rem !important;
-}
-
-.right-5 {
-  right: 1.25rem !important;
-}
-
-.top-5 {
-  top: 1.25rem !important;
-}
-
-.top-6 {
-  top: 1.5rem !important;
-}
-
-.right-6 {
-  right: 1.5rem !important;
-}
-
-.right-7 {
-  right: 1.75rem !important;
-}
-
-.top-7 {
-  top: 1.75rem !important;
-}
-
-.right-8 {
-  right: 2rem !important;
 }
 
 .top-8 {
@@ -803,14 +771,6 @@ video {
 
 .mt-1 {
   margin-top: 0.25rem !important;
-}
-
-.mt-4 {
-  margin-top: 1rem !important;
-}
-
-.mt-5 {
-  margin-top: 1.25rem !important;
 }
 
 .block {
@@ -841,39 +801,14 @@ video {
   display: none !important;
 }
 
-.size-6 {
-  width: 1.5rem !important;
-  height: 1.5rem !important;
-}
-
-.size-full {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.size-8 {
-  width: 2rem !important;
-  height: 2rem !important;
-}
-
-.size-16 {
-  width: 4rem !important;
-  height: 4rem !important;
-}
-
-.size-12 {
-  width: 3rem !important;
-  height: 3rem !important;
-}
-
 .size-14 {
   width: 3.5rem !important;
   height: 3.5rem !important;
 }
 
-.size-10 {
-  width: 2.5rem !important;
-  height: 2.5rem !important;
+.size-full {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .h-full {
@@ -890,6 +825,12 @@ video {
 
 .w-screen {
   width: 100vw !important;
+}
+
+.select-none {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
 }
 
 .resize {
@@ -944,6 +885,19 @@ video {
   border-width: 1px !important;
 }
 
+.border-b {
+  border-bottom-width: 1px !important;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px !important;
+}
+
+.border-light-grey {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(65 65 65 / var(--tw-border-opacity, 1)) !important;
+}
+
 .bg-background {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(38 38 38 / var(--tw-bg-opacity, 1)) !important;
@@ -988,22 +942,13 @@ video {
   text-align: center !important;
 }
 
-.align-middle {
-  vertical-align: middle !important;
-}
-
 .font-poppins {
   font-family: Poppins, serif !important;
 }
 
-.text-2xl {
-  font-size: 1.5rem !important;
-  line-height: 2rem !important;
-}
-
-.text-xl {
-  font-size: 1.25rem !important;
-  line-height: 1.75rem !important;
+.text-3xl {
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
 }
 
 .text-base {
@@ -1011,9 +956,9 @@ video {
   line-height: 1.5rem !important;
 }
 
-.text-3xl {
-  font-size: 1.875rem !important;
-  line-height: 2.25rem !important;
+.text-xl {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
 }
 
 .font-bold {
