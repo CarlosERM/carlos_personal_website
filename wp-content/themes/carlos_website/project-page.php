@@ -4,8 +4,11 @@ Template Name: Projects
 */
 get_header();
 ?>
-<div class='w-4/5 mx-auto'>
-    <ul class='grid grid-cols-3 gap-6'>
+<div class='w-4/5 mx-auto flex flex-col gap-8'>
+    <h2 class='text-3xl font-bold text-white'>
+        <?php the_title()?>
+    </h2>
+    <ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
         <?php
         $args = array('post_type' => 'project', 'posts_per_page' => -1);
         $projects_query = new WP_Query($args);

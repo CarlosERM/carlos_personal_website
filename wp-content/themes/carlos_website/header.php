@@ -12,8 +12,9 @@
 </head>
 
 <body class='bg-background'>
-    <header class='pt-8 px-8 pb-4 flex justify-between items-center text-white border-b-2 border-light-grey'>
-        <h2 class='select-none text-xl leading-none md:text-2xl font-bold'>Carlos <span class='text-primary-carlos'>Miranda</span></h2>
+    <header class='mb-16 pt-8 px-8 pb-4 flex justify-between items-center text-white border-b-2 border-light-grey'>
+        <h2 class='select-none text-xl leading-none md:text-2xl font-bold'>Carlos <span
+                class='text-primary-carlos'>Miranda</span></h2>
         <!-- BURGUER BUTTON -->
         <button id='burguerButton' class='md:hidden hover:bg-background-black p-1 rounded'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -38,12 +39,12 @@
                     rel="noopener noreferrer">
                     <img src='/wp-content/themes/carlos_website/icons/github_white.svg' />
                 </a>
-                <button class='hover:bg-background-black p-1 rounded'>
+                <!-- <button class='hover:bg-background-black p-1 rounded'>
                     <img src='/wp-content/themes/carlos_website/icons/language_white.svg' />
                 </button>
                 <button class='hover:bg-background-black p-1 rounded'>
                     <img src='/wp-content/themes/carlos_website/icons/light.svg' />
-                </button>
+                </button> -->
                 <a class='hover:bg-background-black p-1 rounded' href='https://www.linkedin.com/in/carloserm/'
                     target="_blank" rel="noopener noreferrer">
                     <img src='/wp-content/themes/carlos_website/icons/linkedin_white.png' />
@@ -53,7 +54,8 @@
     </header>
 
     <!-- MODAL -->
-    <div id='modal' class='flex flex-col-reverse w-screen h-screen fixed top-0 right-0 hidden text-white bg-background p-4'>
+    <div id='modal'
+        class='hidden flex flex-col-reverse w-screen h-screen fixed top-0 right-0 text-white bg-background p-4 z-50'>
         <section class='flex items-center justify-center gap-4'>
             <!-- CLOSE BUTTON -->
             <button id='closeButton' class='absolute top-8 right-8 hover:bg-background-black p-1 rounded'>
@@ -67,12 +69,12 @@
                 rel="noopener noreferrer">
                 <img src='/wp-content/themes/carlos_website/icons/github_white.svg' />
             </a>
-            <button class='hover:bg-background-black p-1 rounded'>
+            <!-- <button class='hover:bg-background-black p-1 rounded'>
                 <img src='/wp-content/themes/carlos_website/icons/language_white.svg' />
             </button>
             <button class='hover:bg-background-black p-1 rounded'>
                 <img src='/wp-content/themes/carlos_website/icons/light.svg' />
-            </button>
+            </button> -->
             <a class='hover:bg-background-black p-1 rounded' href='https://www.linkedin.com/in/carloserm/'
                 target="_blank" rel="noopener noreferrer">
                 <img src='/wp-content/themes/carlos_website/icons/linkedin_white.png' />
