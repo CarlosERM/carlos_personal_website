@@ -11,5 +11,7 @@ get_header();
     </h2>
 
     <?php echo the_content()?>
+    <hr />
+    <hr />
 </div>
 <?php get_footer(); ?>

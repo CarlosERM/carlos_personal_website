@@ -91,7 +91,15 @@
     @apply rounded;
   }
 
-  .wp-block-list li, p {
+  .wp-block-media-text__content p {
+    @apply text-terciary-carlos;
+  }
+
+  hr {
+    @apply border-light-grey !important;
+  }
+
+  /* .wp-block-list li, p {
     @apply text-terciary-carlos;
   }
 
@@ -100,7 +108,7 @@
       @apply text-lg;
   }
 
-  .wp-block-separator {
+  .hr {
     @apply border-light-grey !important;
   }
 
@@ -114,5 +122,5 @@
     @apply text-primary-carlos !important;
     @apply font-bold;
     @apply text-lg;
-  }
+  } */
 }
