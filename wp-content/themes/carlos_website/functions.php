@@ -163,7 +163,7 @@ function job_save_meta_data($post_id) {
     }
 
     if (isset($_POST['job_description'])) {
-        update_post_meta($post_id, '_job_description', sanitize_text_field($_POST['job_description']));
+        update_post_meta($post_id, '_job_description', $_POST['job_description']);
     }
 }
 add_action('save_post', 'job_save_meta_data');

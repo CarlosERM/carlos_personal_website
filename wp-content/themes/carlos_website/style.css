@@ -849,6 +849,50 @@ hr {
   margin-top: 4rem !important;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem !important;
+}
+
+.ml-3 {
+  margin-left: 0.75rem !important;
+}
+
+.ml-5 {
+  margin-left: 1.25rem !important;
+}
+
+.ml-7 {
+  margin-left: 1.75rem !important;
+}
+
+.ml-8 {
+  margin-left: 2rem !important;
+}
+
+.ml-4 {
+  margin-left: 1rem !important;
+}
+
+.ml-6 {
+  margin-left: 1.5rem !important;
+}
+
+.mt-24 {
+  margin-top: 6rem !important;
+}
+
+.mt-20 {
+  margin-top: 5rem !important;
+}
+
+.mb-8 {
+  margin-bottom: 2rem !important;
+}
+
 .block {
   display: block !important;
 }
@@ -926,6 +970,10 @@ hr {
   resize: both !important;
 }
 
+.list-disc {
+  list-style-type: disc !important;
+}
+
 .flex-col {
   flex-direction: column !important;
 }
@@ -986,9 +1034,18 @@ hr {
   border-bottom-width: 2px !important;
 }
 
+.border-t {
+  border-top-width: 1px !important;
+}
+
 .border-light-grey {
   --tw-border-opacity: 1 !important;
   border-color: rgb(65 65 65 / var(--tw-border-opacity, 1)) !important;
+}
+
+.border-terciary-carlos {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(188 188 188 / var(--tw-border-opacity, 1)) !important;
 }
 
 .bg-background {
@@ -1064,8 +1121,17 @@ hr {
   line-height: 1.75rem !important;
 }
 
+.text-lg {
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+}
+
 .font-bold {
   font-weight: 700 !important;
+}
+
+.font-medium {
+  font-weight: 500 !important;
 }
 
 .uppercase {
