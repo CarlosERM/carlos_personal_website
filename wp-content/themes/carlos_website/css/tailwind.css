@@ -2,7 +2,7 @@
  * Theme Name:        Carlos's Personal Website
  * Theme URI:         https://carlosmiranda.com/
  * Description:       Site da do Carlos!
- * Version:           0.0.0
+ * Version:           0.0.1
  * Author:            Carlos Eduardo
  * Author URI:        https://carlosmiranda.com/
  */
@@ -101,7 +101,7 @@
 
   /* HEADER LANGUAGE SWITCHER */
   .pll-switcher-select {
-    @apply text-base hover:bg-background-black rounded !important;
+    @apply text-base bg-transparent hover:bg-background-black rounded py-2 px-3 !important;
   }
 
   /* HEADER LANGUAGE SWITCHER */
