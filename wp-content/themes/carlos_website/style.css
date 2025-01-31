@@ -692,30 +692,25 @@ hr {
   border-color: rgb(65 65 65 / var(--tw-border-opacity, 1)) !important;
 }
 
-/* .wp-block-list li, p {
-    @apply text-terciary-carlos;
-  }
+/* HEADER LANGUAGE SWITCHER */
 
-  .wp-block-media-text__content p {
-      @apply text-terciary-carlos;
-      @apply text-lg;
-  }
+.pll-switcher-select {
+  border-radius: 0.25rem;
+  background-color: transparent;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 
-  .hr {
-    @apply border-light-grey !important;
-  }
+.pll-switcher-select:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 24 / var(--tw-bg-opacity, 1));
+}
 
-  .wp-block-heading {
-    @apply text-white;
-    @apply text-2xl;
-    @apply font-bold;
-  }
-
-  code {
-    @apply text-primary-carlos !important;
-    @apply font-bold;
-    @apply text-lg;
-  } */
+/* HEADER LANGUAGE SWITCHER */
 
 .container {
   width: 100%;
@@ -833,64 +828,24 @@ hr {
   margin-bottom: 0.75rem !important;
 }
 
-.mb-16 {
-  margin-bottom: 4rem !important;
-}
-
-.mb-4 {
-  margin-bottom: 1rem !important;
-}
-
-.mt-1 {
-  margin-top: 0.25rem !important;
-}
-
-.mt-16 {
-  margin-top: 4rem !important;
-}
-
 .mb-1 {
   margin-bottom: 0.25rem !important;
+}
+
+.mb-16 {
+  margin-bottom: 4rem !important;
 }
 
 .mb-3 {
   margin-bottom: 0.75rem !important;
 }
 
-.ml-3 {
-  margin-left: 0.75rem !important;
-}
-
-.ml-5 {
-  margin-left: 1.25rem !important;
-}
-
-.ml-7 {
-  margin-left: 1.75rem !important;
-}
-
-.ml-8 {
-  margin-left: 2rem !important;
-}
-
-.ml-4 {
-  margin-left: 1rem !important;
-}
-
 .ml-6 {
   margin-left: 1.5rem !important;
 }
 
-.mt-24 {
-  margin-top: 6rem !important;
-}
-
-.mt-20 {
-  margin-top: 5rem !important;
-}
-
-.mb-8 {
-  margin-bottom: 2rem !important;
+.mt-1 {
+  margin-top: 0.25rem !important;
 }
 
 .block {
@@ -1043,11 +998,6 @@ hr {
   border-color: rgb(65 65 65 / var(--tw-border-opacity, 1)) !important;
 }
 
-.border-terciary-carlos {
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(188 188 188 / var(--tw-border-opacity, 1)) !important;
-}
-
 .bg-background {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(38 38 38 / var(--tw-bg-opacity, 1)) !important;
@@ -1116,13 +1066,13 @@ hr {
   line-height: 1.5rem !important;
 }
 
-.text-xl {
-  font-size: 1.25rem !important;
+.text-lg {
+  font-size: 1.125rem !important;
   line-height: 1.75rem !important;
 }
 
-.text-lg {
-  font-size: 1.125rem !important;
+.text-xl {
+  font-size: 1.25rem !important;
   line-height: 1.75rem !important;
 }
 

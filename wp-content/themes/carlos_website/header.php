@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class='font-poppins'>
+<html lang="pt-br" class='font-poppins'>
 
 <head>
     <meta charset="UTF-8">
@@ -13,8 +13,10 @@
 
 <body class='bg-background'>
     <header class='mb-16 pt-8 px-8 pb-4 flex justify-between items-center text-white border-b-2 border-light-grey'>
-        <h2 class='select-none text-xl leading-none md:text-2xl font-bold'>Carlos <span
-                class='text-primary-carlos'>Miranda</span></h2>
+        <a href=<?php echo home_url() ?>>
+            <h2 class='select-none text-xl leading-none md:text-2xl font-bold'>Carlos <span
+                    class='text-primary-carlos'>Miranda</span></h2>
+        </a>
         <!-- BURGUER BUTTON -->
         <button id='burguerButton' class='md:hidden hover:bg-background-black p-1 rounded'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -33,6 +35,7 @@
                     'link_class' => 'text-base py-2 px-3 hover:bg-background-black rounded'
                 ));
             ?>
+            <?php pll_the_languages( array( 'dropdown' => 1, 'display_names_as' => 'slug' ) ); ?>
 
             <section class='flex items-center gap-4'>
                 <a class='hover:bg-background-black p-1 rounded' href='https://github.com/CarlosERM' target="_blank"
@@ -49,6 +52,7 @@
                     target="_blank" rel="noopener noreferrer">
                     <img src='/wp-content/themes/carlos_website/icons/linkedin_white.png' />
                 </a>
+
             </section>
         </div>
     </header>
@@ -89,5 +93,6 @@
                 'link_class' => 'text-3xl py-2 px-3 hover:bg-background-black rounded'
             ));
         ?>
+
     </div>
     <!-- MODAL -->

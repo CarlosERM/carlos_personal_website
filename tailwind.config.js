@@ -2,6 +2,7 @@
 module.exports = {
   important: true,
   content: ["./**/*.php"],
+  safelist: ['sub-menu'],
   theme: {
     fontFamily:  {
       'poppins': ['Poppins', 'serif'],

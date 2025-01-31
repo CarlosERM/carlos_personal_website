@@ -99,28 +99,10 @@
     @apply border-light-grey !important;
   }
 
-  /* .wp-block-list li, p {
-    @apply text-terciary-carlos;
+  /* HEADER LANGUAGE SWITCHER */
+  .pll-switcher-select {
+    @apply text-base hover:bg-background-black rounded !important;
   }
 
-  .wp-block-media-text__content p {
-      @apply text-terciary-carlos;
-      @apply text-lg;
-  }
-
-  .hr {
-    @apply border-light-grey !important;
-  }
-
-  .wp-block-heading {
-    @apply text-white;
-    @apply text-2xl;
-    @apply font-bold;
-  }
-
-  code {
-    @apply text-primary-carlos !important;
-    @apply font-bold;
-    @apply text-lg;
-  } */
+  /* HEADER LANGUAGE SWITCHER */
 }

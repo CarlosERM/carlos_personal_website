@@ -4,7 +4,7 @@ Template Name: Projects
 */
 get_header();
 ?>
-<div class='w-4/5 mx-auto flex flex-col gap-8'>
+<div class='w-4/5 mx-auto flex flex-col gap-8 mb-16'>
     <h2 class='text-3xl font-bold text-white'>
         <?php the_title()?>
     </h2>

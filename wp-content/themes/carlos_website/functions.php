@@ -35,6 +35,7 @@ function register_projects() {
         'has_archive' => true,
         'menu_icon' => 'dashicons-portfolio',
         'supports' => array('title'),
+        'show_in_rest' => true
     );
     register_post_type('project', $args);
 }
@@ -102,6 +103,7 @@ function register_jobs() {
         'has_archive' => true,
         'menu_icon' => 'dashicons-welcome-widgets-menus',
         'supports' => array('title'),
+        'show_in_rest' => true
     );
     register_post_type('job', $args);
 }
