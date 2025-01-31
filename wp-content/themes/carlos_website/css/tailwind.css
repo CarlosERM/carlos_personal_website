@@ -81,8 +81,8 @@
 
   .wp-block-media-text {
     @apply gap-8 !important;
+    @apply md:flex md:flex-col md:gap-5;
   }
-
   .wp-block-media-text__content {
       @apply p-0 !important;
   }
@@ -100,9 +100,10 @@
   }
 
   /* HEADER LANGUAGE SWITCHER */
-  .pll-switcher-select {
+  /* .pll-switcher-select {
     @apply text-base bg-transparent hover:bg-background-black rounded py-2 px-3 !important;
   }
-
+  .mobile-languages {
+  } */
   /* HEADER LANGUAGE SWITCHER */
 }

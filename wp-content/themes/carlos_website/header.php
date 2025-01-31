@@ -35,24 +35,19 @@
                     'link_class' => 'text-base py-2 px-3 hover:bg-background-black rounded'
                 ));
             ?>
-            <?php pll_the_languages( array( 'dropdown' => 1, 'display_names_as' => 'slug' ) ); ?>
 
             <section class='flex items-center gap-4'>
                 <a class='hover:bg-background-black p-1 rounded' href='https://github.com/CarlosERM' target="_blank"
                     rel="noopener noreferrer">
                     <img src='/wp-content/themes/carlos_website/icons/github_white.svg' />
                 </a>
-                <!-- <button class='hover:bg-background-black p-1 rounded'>
-                    <img src='/wp-content/themes/carlos_website/icons/language_white.svg' />
-                </button>
-                <button class='hover:bg-background-black p-1 rounded'>
-                    <img src='/wp-content/themes/carlos_website/icons/light.svg' />
-                </button> -->
                 <a class='hover:bg-background-black p-1 rounded' href='https://www.linkedin.com/in/carloserm/'
                     target="_blank" rel="noopener noreferrer">
                     <img src='/wp-content/themes/carlos_website/icons/linkedin_white.png' />
                 </a>
-
+                <ul class='flex gap-4 list-none'>
+                    <?php pll_the_languages( array( 'show_flags' => 1, 'show_names' => 0 ) ); ?>
+                </ul>
             </section>
         </div>
     </header>
@@ -83,7 +78,12 @@
                 target="_blank" rel="noopener noreferrer">
                 <img src='/wp-content/themes/carlos_website/icons/linkedin_white.png' />
             </a>
+            <ul class='flex gap-4 list-none'>
+                <?php  pll_the_languages( array( 'show_flags' => 1, 'show_names' => 0 ) ); ?>
+            </ul>
+
         </section>
+
         <?php wp_nav_menu(
             array(
                 'theme_location' => 'header-menu',
