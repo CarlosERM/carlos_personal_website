@@ -674,25 +674,35 @@ video {
   gap: 2rem !important;
 }
 
-@media (min-width: 768px) {
-  .wp-block-media-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-}
-
 .wp-block-media-text__content {
   padding: 0px !important;
 }
 
+.wp-block-media-text__media {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+}
+
 .wp-block-media-text__media img {
-  border-radius: 0.25rem;
+  height: 31.25rem !important;
+  width: 100% !important;
+  border-radius: 0.25rem !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
+@media (min-width: 768px) {
+  .wp-block-media-text__media img {
+    width: 28.125rem !important;
+    height: 28.125rem !important;
+  }
 }
 
 .wp-block-media-text__content p {
   --tw-text-opacity: 1;
   color: rgb(188 188 188 / var(--tw-text-opacity, 1));
+  margin-bottom: 0.5rem;
 }
 
 hr {

@@ -81,18 +81,21 @@
 
   .wp-block-media-text {
     @apply gap-8 !important;
-    @apply md:flex md:flex-col md:gap-5;
   }
   .wp-block-media-text__content {
       @apply p-0 !important;
   }
+  .wp-block-media-text__media {
+    @apply flex justify-end items-center !important;
 
+  }
   .wp-block-media-text__media img {
-    @apply rounded;
+    @apply rounded md:size-[28.125rem] w-full h-[31.25rem] object-cover !important;
   }
 
   .wp-block-media-text__content p {
     @apply text-terciary-carlos;
+    @apply mb-2;
   }
 
   hr {
