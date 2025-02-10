@@ -4,13 +4,19 @@ Template Name: Projects
 */
 get_header();
 ?>
+
 <div class='w-4/5 mx-auto flex flex-col gap-8 mb-16'>
     <h2 class='text-3xl font-bold text-white'>
         <?php the_title()?>
     </h2>
     <ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
         <?php
-        $args = array('post_type' => 'project', 'posts_per_page' => -1);
+        $args = array(
+            'post_type' => 'project',
+            'posts_per_page' => -1,
+            'orderby' => 'project_year',
+            'order' => 'DESC'
+        );
         $projects_query = new WP_Query($args);
 
         if ($projects_query->have_posts()) :
@@ -18,7 +24,7 @@ get_header();
                 $description = get_post_meta(get_the_ID(), '_project_description', true);
                 $link = get_post_meta(get_the_ID(), '_project_link', true);
                 $year = get_post_meta(get_the_ID(), '_project_year', true);
-                ?>
+            ?>
         <a href=<?php echo esc_html($link); ?> target="_blank" rel="noopener noreferrer">
             <li
                 class='flex flex-col gap-4 p-4 relative bg-background-light rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all group'>
@@ -26,7 +32,6 @@ get_header();
                     <h3 class='text-2xl font-bold text-white'><?php the_title(); ?></h3>
                     <p class='text-secondary-carlos'><?php echo esc_html($year); ?></p>
                 </div>
-
                 <p class='text-terciary-carlos mb-16'><?php echo esc_html($description); ?></p>
 
                 <svg class='absolute bottom-4 right-4 size-6 text-terciary-carlos group-hover:text-white transition-all'

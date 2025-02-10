@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/wp-content/themes/carlos_website/style.css">
-    <?php
-    wp_head()
-    ?>
+    <?php wp_head() ?>
 </head>
 
 <body class='bg-background'>
     <header class='mb-16 pt-8 px-8 pb-4 flex justify-between items-center text-white border-b-2 border-light-grey'>
         <a href=<?php echo home_url() ?>>
-            <h2 class='select-none text-xl leading-none md:text-2xl font-bold'>Carlos <span
-                    class='text-primary-carlos'>Miranda</span></h2>
+            <h2 class='select-none text-xl leading-none md:text-2xl font-bold'>Carlos
+                <span class='text-primary-carlos'>
+                    Miranda
+                </span>
+            </h2>
         </a>
         <!-- BURGUER BUTTON -->
         <button id='burguerButton' class='md:hidden hover:bg-background-black p-1 rounded'>
@@ -50,7 +51,6 @@
             </section>
         </div>
     </header>
-
     <!-- MODAL -->
     <div id='modal'
         class='hidden flex flex-col-reverse w-screen h-screen fixed top-0 right-0 text-white bg-background p-4 z-50'>
@@ -80,9 +80,7 @@
             <ul class='flex gap-4 list-none'>
                 <?php  pll_the_languages( array( 'show_flags' => 1, 'show_names' => 0 ) ); ?>
             </ul>
-
         </section>
-
         <?php wp_nav_menu(
             array(
                 'theme_location' => 'header-menu',
@@ -92,6 +90,5 @@
                 'link_class' => 'text-3xl py-2 px-3 hover:bg-background-black rounded'
             ));
         ?>
-
     </div>
     <!-- MODAL -->

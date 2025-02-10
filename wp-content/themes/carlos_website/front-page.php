@@ -26,7 +26,11 @@ get_header();
     </h3>
     <!-- <ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'> -->
     <?php
-        $args = array('post_type' => 'job', 'posts_per_page' => -1);
+        $args = array(
+            'post_type' => 'job',
+            'posts_per_page' => -1,
+            'orderby' => 'project_year',
+            'order' => 'ASC');
         $job_query = new WP_Query($args);
 
         if ($job_query->have_posts()) :
