@@ -129,15 +129,15 @@ function job_info_callback($post) {
     $start_date = get_post_meta($post->ID, '_job_start_date', true);
     $finish_date = get_post_meta($post->ID, '_job_finish_date', true);
     $description = get_post_meta($post->ID, '_job_description', true);
-    $year = get_post_meta($post->ID, '_project_year', true);
+    $year = get_post_meta($post->ID, '_job_year', true);
     ?>
 <p>
     <label for="job_company">Nome da Empresa:</label><br>
     <input type="text" id="job_company" name="job_company" value="<?php echo esc_attr($company); ?>" size="30" />
 </p>
 <p>
-    <label for="project_year">Ano de Criação:</label><br>
-    <input type="number" id="project_year" name="project_year" value="<?php echo esc_attr($year); ?>" size="30" />
+    <label for="job_year">Ano de Criação:</label><br>
+    <input type="number" id="job_year" name="job_year" value="<?php echo esc_attr($year); ?>" size="30" />
 </p>
 <p>
     <label for="job_start_date">Data de início:</label><br>
@@ -170,8 +170,8 @@ function job_save_meta_data($post_id) {
     if (isset($_POST['job_description'])) {
         update_post_meta($post_id, '_job_description', $_POST['job_description']);
     }
-    if (isset($_POST['project_year'])) {
-        update_post_meta($post_id, '_project_year', sanitize_text_field($_POST['project_year']));
+    if (isset($_POST['job_year'])) {
+        update_post_meta($post_id, '_job_year', sanitize_text_field($_POST['job_year']));
     }
 }
 add_action('save_post', 'job_save_meta_data');

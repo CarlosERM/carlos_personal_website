@@ -11,12 +11,24 @@ get_header();
     </h2>
     <ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
         <?php
-        $args = array(
-            'post_type' => 'project',
-            'posts_per_page' => -1,
-            'orderby' => 'project_year',
-            'order' => 'DESC'
-        );
+        if (pll_current_language() === 'en') {
+            // English-specific query
+            $args = array(
+                'post_type' => 'project',
+                'posts_per_page' => -1,
+                'orderby' => 'project_year',
+                'order' => 'ASC',
+            );
+        } else {
+            // Query for other languages
+            $args = array(
+                'post_type' => 'project',
+                'posts_per_page' => -1,
+                'orderby' => 'project_year',
+                'order' => 'DESC',
+            );
+        }
+
         $projects_query = new WP_Query($args);
 
         if ($projects_query->have_posts()) :
