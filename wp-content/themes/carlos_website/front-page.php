@@ -26,23 +26,15 @@ get_header();
     </h3>
     <!-- <ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'> -->
     <?php
-        if (pll_current_language() === 'en') {
-            // English-specific query
-            $args = array(
-                'post_type' => 'job',
-                'posts_per_page' => -1,
-                'orderby' => 'job_year',
-                'order' => 'DESC',
-            );
-        } else {
-            // Query for other languages
-            $args = array(
-                'post_type' => 'job',
-                'posts_per_page' => -1,
-                'orderby' => 'job_year',
-                'order' => 'ASC',
-            );
-        }
+
+        // Query for other languages
+        $args = array(
+            'post_type' => 'job',
+            'posts_per_page' => -1,
+            'orderby' => 'meta_value',
+            'order' => 'DESC',
+            'meta_key' => '_job_year',
+        );
 
         $job_query = new WP_Query($args);
 

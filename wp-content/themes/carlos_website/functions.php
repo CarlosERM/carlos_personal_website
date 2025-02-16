@@ -136,7 +136,7 @@ function job_info_callback($post) {
     <input type="text" id="job_company" name="job_company" value="<?php echo esc_attr($company); ?>" size="30" />
 </p>
 <p>
-    <label for="job_year">Ano de Criação:</label><br>
+    <label for="job_year">Ano de início:</label><br>
     <input type="number" id="job_year" name="job_year" value="<?php echo esc_attr($year); ?>" size="30" />
 </p>
 <p>

@@ -11,23 +11,15 @@ get_header();
     </h2>
     <ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
         <?php
-        if (pll_current_language() === 'en') {
-            // English-specific query
-            $args = array(
-                'post_type' => 'project',
-                'posts_per_page' => -1,
-                'orderby' => 'project_year',
-                'order' => 'ASC',
-            );
-        } else {
-            // Query for other languages
-            $args = array(
-                'post_type' => 'project',
-                'posts_per_page' => -1,
-                'orderby' => 'project_year',
-                'order' => 'DESC',
-            );
-        }
+
+        // Query for other languages
+        $args = array(
+            'post_type' => 'project',
+            'posts_per_page' => -1,
+            'orderby' => 'meta_value', // For text fields
+            'order' => 'DESC',
+            'meta_key' => '_project_year', // Make sure the meta key is prefixed with an underscore
+        );
 
         $projects_query = new WP_Query($args);
 
