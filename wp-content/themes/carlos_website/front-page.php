@@ -33,7 +33,7 @@ get_header();
             'posts_per_page' => -1,
             'orderby' => 'meta_value',
             'order' => 'DESC',
-            'meta_key' => '_job_year',
+            'meta_key' => '_job_finish_date',
         );
 
         $job_query = new WP_Query($args);
@@ -44,13 +44,16 @@ get_header();
                 $start_date = get_post_meta(get_the_ID(), '_job_start_date', true);
                 $finish_date = get_post_meta(get_the_ID(), '_job_finish_date', true);
                 $description = get_post_meta(get_the_ID(), '_job_description', true);
+
+                $formatted_start_date = date_i18n( 'F j, Y', strtotime( $start_date ) );
+                $formatted_finish_date = date_i18n( 'F j, Y', strtotime( $finish_date ) );
                 ?>
     <div>
 
         <h4 class='text-lg font-bold text-primary-carlos mb-1'><?php the_title() ?></h4>
         <h5 class='text-white font-medium mb-3'><?php echo $company ?> <span
-                class='text-terciary-carlos'>(<?php echo $start_date ?> -
-                <?php echo $finish_date ?>)</span></h5>
+                class='text-terciary-carlos'>(<?php echo $formatted_start_date ?> -
+                <?php echo $formatted_finish_date ?>)</span></h5>
         <ul class='ml-6 list-disc text-terciary-carlos'>
             <?php echo $description ?>
         </ul>

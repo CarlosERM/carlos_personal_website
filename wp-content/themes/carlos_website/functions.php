@@ -59,6 +59,7 @@ function project_info_callback($post) {
     $description = get_post_meta($post->ID, '_project_description', true);
     $link = get_post_meta($post->ID, '_project_link', true);
     $year = get_post_meta($post->ID, '_project_year', true);
+    $date = get_post_meta($post->ID, '_project_date', true);
     ?>
 <p>
     <label for="project_description">Descrição:</label><br>
@@ -72,6 +73,10 @@ function project_info_callback($post) {
 <p>
     <label for="project_year">Ano de Criação:</label><br>
     <input type="number" id="project_year" name="project_year" value="<?php echo esc_attr($year); ?>" size="30" />
+</p>
+<p>
+    <label for="project_date">Data de Conclusão:</label><br>
+    <input type="date" id="project_date" name="project_date" value="<?php echo esc_attr($date); ?>" size="30" />
 </p>
 <?php
 }
@@ -87,6 +92,10 @@ function project_save_meta_data($post_id) {
 
     if (isset($_POST['project_year'])) {
         update_post_meta($post_id, '_project_year', sanitize_text_field($_POST['project_year']));
+    }
+
+    if (isset($_POST['project_date'])) {
+        update_post_meta($post_id, '_project_date', $_POST['project_date']);
     }
 }
 
@@ -141,12 +150,12 @@ function job_info_callback($post) {
 </p>
 <p>
     <label for="job_start_date">Data de início:</label><br>
-    <input type="text" id="job_start_date" name="job_start_date" value="<?php echo esc_attr($start_date); ?>"
+    <input type="date" id="job_start_date" name="job_start_date" value="<?php echo esc_attr($start_date); ?>"
         size="30" />
 </p>
 <p>
     <label for="job_finish_date">Data de encerramento:</label><br>
-    <input type="text" id="job_finish_date" name="job_finish_date" value="<?php echo esc_attr($finish_date); ?>"
+    <input type="date" id="job_finish_date" name="job_finish_date" value="<?php echo esc_attr($finish_date); ?>"
         size="30" />
 </p>
 <p>
@@ -162,10 +171,10 @@ function job_save_meta_data($post_id) {
         update_post_meta($post_id, '_job_company', sanitize_text_field($_POST['job_company']));
     }
     if (isset($_POST['job_start_date'])) {
-        update_post_meta($post_id, '_job_start_date', sanitize_text_field($_POST['job_start_date']));
+        update_post_meta($post_id, '_job_start_date', $_POST['job_start_date']);
     }
     if (isset($_POST['job_finish_date'])) {
-        update_post_meta($post_id, '_job_finish_date', sanitize_text_field($_POST['job_finish_date']));
+        update_post_meta($post_id, '_job_finish_date', $_POST['job_finish_date']);
     }
     if (isset($_POST['job_description'])) {
         update_post_meta($post_id, '_job_description', $_POST['job_description']);

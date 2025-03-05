@@ -670,6 +670,11 @@ video {
   src: url('./font/Poppins/Poppins-Black.ttf') format('truetype');
 }
 
+.current-menu-item a {
+  --tw-text-opacity: 1 !important;
+  color: rgb(151 71 255 / var(--tw-text-opacity, 1)) !important;
+}
+
 .wp-block-media-text {
   gap: 2rem !important;
 }
@@ -829,11 +834,6 @@ hr {
 .mx-auto {
   margin-left: auto !important;
   margin-right: auto !important;
-}
-
-.my-3 {
-  margin-top: 0.75rem !important;
-  margin-bottom: 0.75rem !important;
 }
 
 .mb-1 {

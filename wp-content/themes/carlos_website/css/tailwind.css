@@ -75,7 +75,13 @@
       src: url('./font/Poppins/Poppins-Black.ttf') format('truetype');
   }
 
-  .current_page_item {
+  .current_page_item  {
+    @apply font-medium
+    @apply text-primary-carlos !important;
+  }
+
+  .current-menu-item a {
+    @apply font-medium
     @apply text-primary-carlos !important;
   }
 

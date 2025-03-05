@@ -6,6 +6,7 @@ get_header();
 ?>
 
 <div class='w-4/5 mx-auto flex flex-col gap-8 mb-16'>
+    <?php $language = pll_current_language() ?>
     <h2 class='text-3xl font-bold text-white'>
         <?php the_title()?>
     </h2>
@@ -16,9 +17,9 @@ get_header();
         $args = array(
             'post_type' => 'project',
             'posts_per_page' => -1,
-            'orderby' => 'meta_value', // For text fields
+            'orderby' => 'meta_value',
             'order' => 'DESC',
-            'meta_key' => '_project_year', // Make sure the meta key is prefixed with an underscore
+            'meta_key' => '_project_date',
         );
 
         $projects_query = new WP_Query($args);
@@ -27,14 +28,20 @@ get_header();
             while ($projects_query -> have_posts()) : $projects_query -> the_post();
                 $description = get_post_meta(get_the_ID(), '_project_description', true);
                 $link = get_post_meta(get_the_ID(), '_project_link', true);
-                $year = get_post_meta(get_the_ID(), '_project_year', true);
+                $date = get_post_meta(get_the_ID(), '_project_date', true);
+
+                if ($language == 'pt') {
+                    $formatted_date = date( 'd/m/Y', strtotime( $date ) );
+                } else {
+                    $formatted_date = date( 'm/d/Y', strtotime( $date ) );
+                }
             ?>
         <a href=<?php echo esc_html($link); ?> target="_blank" rel="noopener noreferrer">
             <li
                 class='flex flex-col gap-4 p-4 relative bg-background-light rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all group'>
                 <div class='flex justify-between items-center'>
                     <h3 class='text-2xl font-bold text-white'><?php the_title(); ?></h3>
-                    <p class='text-secondary-carlos'><?php echo esc_html($year); ?></p>
+                    <p class='text-secondary-carlos'><?php echo esc_html($formatted_date); ?></p>
                 </div>
                 <p class='text-terciary-carlos mb-16'><?php echo esc_html($description); ?></p>
 
@@ -50,7 +57,11 @@ get_header();
                 endwhile;
                 wp_reset_postdata();
             else:
-                echo '<p>Nenhum serviço foi cadastrado.</p>';
+                if ($language == 'pt') {
+                    echo '<p class="text-terciary-carlos">Nenhum projeto foi cadastrado.</p>';
+                } else {
+                    echo '<p class="text-terciary-carlos">No projects found.</p>';
+                }
             endif;
         ?>
     </ul>
