@@ -26,20 +26,40 @@ get_header();
     </h3>
     <!-- <ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'> -->
     <?php
-
-        // Query for other languages
-        $args = array(
-            'post_type' => 'job',
+      // Busca primeiro os trabalhos em andamento (sem _job_finish_date)
+        $ongoing_jobs = new WP_Query(array(
+            'post_type'      => 'job',
             'posts_per_page' => -1,
-            'orderby' => 'meta_value',
-            'order' => 'DESC',
-            'meta_key' => '_job_finish_date',
-        );
+            'meta_query'     => array(
+                array(
+                    'key'     => '_job_finish_date',
+                    'compare' => '=',
+                    'value'   => '', // Captura registros onde a data está vazia
+                ),
+            ),
+        ));
 
-        $job_query = new WP_Query($args);
+        // Agora, busca os trabalhos finalizados, ordenados pela data de término
+        $finished_jobs = new WP_Query(array(
+            'post_type'      => 'job',
+            'posts_per_page' => -1,
+            'meta_key'       => '_job_finish_date',
+            'orderby'        => 'meta_value',
+            'order'          => 'DESC',
+            'meta_query'     => array(
+                array(
+                    'key'     => '_job_finish_date',
+                    'compare' => '!=',
+                    'value'   => '', // Captura registros onde a data está vazia
+                ),
+            ),
+        ));
 
-        if ($job_query->have_posts()) :
-            while ($job_query -> have_posts()) : $job_query -> the_post();
+        $job_query = array_merge($ongoing_jobs->posts, $finished_jobs->posts);
+
+        if (!empty($job_query)) :
+            foreach ($job_query as $post) :
+                setup_postdata($post);
                 $company = get_post_meta(get_the_ID(), '_job_company', true);
                 $start_date = get_post_meta(get_the_ID(), '_job_start_date', true);
                 $finish_date = get_post_meta(get_the_ID(), '_job_finish_date', true);
@@ -67,7 +87,7 @@ get_header();
         </ul>
     </div>
     <?php
-        endwhile;
+        endforeach;
             wp_reset_postdata();
         else:
             if ($language == 'pt') {
