@@ -23,7 +23,7 @@ get_header();
         if ($articles_query->have_posts()) :
             while ($articles_query -> have_posts()) : $articles_query -> the_post();
             ?>
-        <a class="p-4 border border-transparent hover:border-light-grey hover:shadow-lg hover:bg-background-light-black active:bg-background-light"
+        <a class="rounded p-4 border border-transparent hover:border-light-grey hover:shadow-lg hover:bg-background-light-black active:bg-background-light"
             href="<?php the_permalink(); ?>">
             <li>
                 <?php if (has_post_thumbnail()) : ?>
@@ -40,9 +40,9 @@ get_header();
                 wp_reset_postdata();
             else:
                 if ($language == 'pt') {
-                    echo '<p class="text-terciary-carlos">Nenhum projeto foi cadastrado.</p>';
+                    echo '<p class="text-terciary-carlos">Nenhum artigo foi encontrado.</p>';
                 } else {
-                    echo '<p class="text-terciary-carlos">No projects found.</p>';
+                    echo '<p class="text-terciary-carlos">No articles found.</p>';
                 }
             endif;
         ?>

@@ -732,12 +732,9 @@ hr {
   border-radius: 0.25rem !important;
 }
 
-.article-content p br {
-  display: block !important;
-  margin: 0px !important;
-  padding: 0px !important;
-  height: 0px !important;
-  width: 0px !important;
+.article-image img {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
 }
 
 /* POST STYLE */
@@ -908,6 +905,10 @@ hr {
   height: 100% !important;
 }
 
+.h-\[514px\] {
+  height: 514px !important;
+}
+
 .h-full {
   height: 100% !important;
 }
@@ -992,6 +993,10 @@ hr {
 
 .gap-8 {
   gap: 2rem !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
 }
 
 .rounded {
