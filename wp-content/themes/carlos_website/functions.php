@@ -70,10 +70,7 @@ function project_info_callback($post) {
     <label for="project_link">Link do Projeto:</label><br>
     <input type="url" id="project_link" name="project_link" value="<?php echo esc_attr($link); ?>" size="30" />
 </p>
-<p>
-    <label for="project_year">Ano de Criação:</label><br>
-    <input type="number" id="project_year" name="project_year" value="<?php echo esc_attr($year); ?>" size="30" />
-</p>
+
 <p>
     <label for="project_date">Data de Conclusão:</label><br>
     <input type="date" id="project_date" name="project_date" value="<?php echo esc_attr($date); ?>" size="30" />
@@ -88,10 +85,6 @@ function project_save_meta_data($post_id) {
 
     if (isset($_POST['project_link'])) {
         update_post_meta($post_id, '_project_link', esc_url($_POST['project_link']));
-    }
-
-    if (isset($_POST['project_year'])) {
-        update_post_meta($post_id, '_project_year', sanitize_text_field($_POST['project_year']));
     }
 
     if (isset($_POST['project_date'])) {
@@ -145,10 +138,6 @@ function job_info_callback($post) {
     <input type="text" id="job_company" name="job_company" value="<?php echo esc_attr($company); ?>" size="30" />
 </p>
 <p>
-    <label for="job_year">Ano de início:</label><br>
-    <input type="number" id="job_year" name="job_year" value="<?php echo esc_attr($year); ?>" size="30" />
-</p>
-<p>
     <label for="job_start_date">Data de início:</label><br>
     <input type="date" id="job_start_date" name="job_start_date" value="<?php echo esc_attr($start_date); ?>"
         size="30" />
@@ -179,9 +168,7 @@ function job_save_meta_data($post_id) {
     if (isset($_POST['job_description'])) {
         update_post_meta($post_id, '_job_description', $_POST['job_description']);
     }
-    if (isset($_POST['job_year'])) {
-        update_post_meta($post_id, '_job_year', sanitize_text_field($_POST['job_year']));
-    }
+
 }
 add_action('save_post', 'job_save_meta_data');
 // REGISTER JOB EXPERIENCES

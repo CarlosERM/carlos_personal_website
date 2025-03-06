@@ -671,6 +671,7 @@ video {
 }
 
 .current-menu-item a {
+  font-weight: 500;
   --tw-text-opacity: 1 !important;
   color: rgb(151 71 255 / var(--tw-text-opacity, 1)) !important;
 }

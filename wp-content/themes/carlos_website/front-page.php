@@ -47,6 +47,14 @@ get_header();
 
                 $formatted_start_date = date_i18n( 'F j, Y', strtotime( $start_date ) );
                 $formatted_finish_date = date_i18n( 'F j, Y', strtotime( $finish_date ) );
+
+                if(empty($finish_date)) {
+                    if ($language == 'pt') {
+                        $formatted_finish_date = "Presente";
+                    } else {
+                        $formatted_finish_date = "Present";
+                    }
+                }
                 ?>
     <div>
 
