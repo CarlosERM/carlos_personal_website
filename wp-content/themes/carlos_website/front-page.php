@@ -65,8 +65,8 @@ get_header();
                 $finish_date = get_post_meta(get_the_ID(), '_job_finish_date', true);
                 $description = get_post_meta(get_the_ID(), '_job_description', true);
 
-                $formatted_start_date = date_i18n( 'F j, Y', strtotime( $start_date ) );
-                $formatted_finish_date = date_i18n( 'F j, Y', strtotime( $finish_date ) );
+                $formatted_start_date = date_i18n( 'F Y', strtotime( $start_date ) );
+                $formatted_finish_date = date_i18n( 'F Y', strtotime( $finish_date ) );
 
                 if(empty($finish_date)) {
                     if ($language == 'pt') {
