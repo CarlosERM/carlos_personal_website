@@ -1081,6 +1081,18 @@ hr {
   padding-top: 2rem !important;
 }
 
+.pb-8 {
+  padding-bottom: 2rem !important;
+}
+
+.pt-6 {
+  padding-top: 1.5rem !important;
+}
+
+.pt-5 {
+  padding-top: 1.25rem !important;
+}
+
 .text-center {
   text-align: center !important;
 }
@@ -1255,6 +1267,40 @@ hr {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
+@media (min-width: 640px) {
+  .sm\:block {
+    display: block !important;
+  }
+
+  .sm\:w-4\/5 {
+    width: 80% !important;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row !important;
+  }
+
+  .sm\:px-0 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex !important;
@@ -1264,6 +1310,10 @@ hr {
     display: none !important;
   }
 
+  .md\:h-\[514px\] {
+    height: 514px !important;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
@@ -1271,6 +1321,11 @@ hr {
   .md\:text-2xl {
     font-size: 1.5rem !important;
     line-height: 2rem !important;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
   }
 }
 

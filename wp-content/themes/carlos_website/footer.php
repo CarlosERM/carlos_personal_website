@@ -1,4 +1,5 @@
-<footer class="text-white text-center border-t border-light-grey flex justify-center items-center p-4 gap-3">
+<footer
+    class="flex-col-reverse sm:flex-row text-xs sm:text-base text-white text-center border-t border-light-grey flex justify-center items-center p-4 gap-3">
     <a class='hover:bg-background-black p-1 rounded' href='https://github.com/CarlosERM/carlos_personal_website'
         target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github"

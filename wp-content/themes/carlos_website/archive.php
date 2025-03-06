@@ -4,7 +4,7 @@ Template Name: Articles
 */
 get_header();
 ?>
-<div class='w-4/5 mx-auto flex flex-col gap-8 mb-16'>
+<div class='px-3 w-full sm:px-0 sm:w-4/5 mx-auto flex flex-col gap-8 mb-16'>
     <h2 class='text-3xl font-bold text-white'>
         <?php the_title()?>
     </h2>
@@ -30,7 +30,7 @@ get_header();
                 <?php the_post_thumbnail('medium-large'); ?>
                 <?php endif; ?>
                 <p class="text-quartenary-carlos pb-1 pt-4 font-normal text-xs"><?php echo get_the_date(); ?></p>
-                <h3 class="text-white pb-2 font-bold text-xl"><?php the_title(); ?></h3>
+                <h3 class="text-lg text-white pb-2 font-bold sm:text-xl"><?php the_title(); ?></h3>
                 <p class="text-terciary-carlos font-medium text-sm"><?php echo get_the_excerpt(); ?></p>
             </li>
         </a>

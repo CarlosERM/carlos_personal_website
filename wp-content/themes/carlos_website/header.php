@@ -9,7 +9,7 @@
 </head>
 
 <body class='bg-background'>
-    <header class='mb-16 pt-8 px-8 pb-4 flex justify-between items-center text-white border-b-2 border-light-grey'>
+    <header class='mb-16 pt-6 px-8 pb-4 flex justify-between items-center text-white border-b-2 border-light-grey'>
         <a href=<?php echo home_url() ?>>
             <h2 class='select-none text-xl leading-none md:text-2xl font-bold'>Carlos
                 <span class='text-primary-carlos'>
