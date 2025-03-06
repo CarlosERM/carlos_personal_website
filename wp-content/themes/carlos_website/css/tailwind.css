@@ -114,4 +114,18 @@
   .mobile-languages {
   } */
   /* HEADER LANGUAGE SWITCHER */
+  /* POST STYLE */
+
+  .wp-post-image {
+    @apply rounded !important;
+  }
+
+  .article-content p br  {
+    @apply block !important;
+    @apply m-0 !important;
+    @apply p-0 !important;
+    @apply h-0 !important;
+    @apply w-0 !important;
+  }
+  /* POST STYLE */
 }

@@ -13,7 +13,6 @@ get_header();
     <div>
         <?php echo the_content()?>
     </div>
-
     <hr />
     <h3 class='text-2xl font-bold text-white'>
         <?php

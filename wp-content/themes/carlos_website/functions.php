@@ -179,4 +179,17 @@ function title_template() {
 }
 add_action( 'after_setup_theme', 'title_template' );
 // TITLE
+
+// ARTICLES
+add_theme_support('post-thumbnails');
+// ARTICLES
+
+function no_cache_for_dev() {
+    if (defined('WP_DEBUG') && WP_DEBUG) {
+        header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+        header("Pragma: no-cache");
+        header("Expires: 0");
+    }
+}
+add_action('send_headers', 'no_cache_for_dev')
 ?>
