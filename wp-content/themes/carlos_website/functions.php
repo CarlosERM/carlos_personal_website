@@ -179,17 +179,38 @@ function title_template() {
 }
 add_action( 'after_setup_theme', 'title_template' );
 // TITLE
-
 // ARTICLES
 add_theme_support('post-thumbnails');
+// function enqueue_prism_js() {
+//     // Enqueue Prism CSS (Dark Theme)
+//     // wp_enqueue_style('prism-css', 'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-dark.min.css', array(), '1.29.0');
+
+//     // Enqueue Prism JS Core
+//     // wp_enqueue_script('prism-js', 'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js', array(), '1.29.0', true);
+
+//     // Add Bash language support (Ensuring it loads after Prism Core)
+//     // wp_enqueue_script('prism-bash', 'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js', array('prism-js'), '1.29.0', true);
+// }
+
+// // Hook for frontend scripts
+// add_action('wp_enqueue_scripts', 'enqueue_prism_js');
+
+function bash_script_shortcode($atts, $content = null) {
+$content = strip_tags($content);
+$content = trim($content);
+
+return '
+<pre><code class="language-bash">' . esc_html($content) . '</code></pre>';
+}
+add_shortcode('bash', 'bash_script_shortcode');
 // ARTICLES
 
-function no_cache_for_dev() {
-    if (defined('WP_DEBUG') && WP_DEBUG) {
-        header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-        header("Pragma: no-cache");
-        header("Expires: 0");
-    }
-}
-add_action('send_headers', 'no_cache_for_dev')
+// function no_cache_for_dev() {
+// if (defined('WP_DEBUG') && WP_DEBUG) {
+// header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+// header("Pragma: no-cache");
+// header("Expires: 0");
+// }
+// }
+// add_action('send_headers', 'no_cache_for_dev')
 ?>

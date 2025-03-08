@@ -6,9 +6,12 @@
  * Author:            Carlos Eduardo
  * Author URI:        https://carlosmiranda.com/
  */
+@import url('./one-dark-code.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   @font-face {
@@ -123,5 +126,25 @@
   .article-image img {
     @apply object-cover !important;
   }
+
+  .article-content p {
+    @apply mb-2;
+  }
+  .article-content h3.wp-block-heading {
+    @apply text-white;
+    @apply my-4;
+  }
+
+  .article-content pre {
+    @apply my-4;
+  }
+
+  .article-content p a {
+    @apply text-blue-500
+  }
+  .article-content p a:hover {
+    @apply underline;
+  }
   /* POST STYLE */
+
 }

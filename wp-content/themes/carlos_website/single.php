@@ -9,12 +9,13 @@
         if (has_post_thumbnail()) {
             echo the_post_thumbnail('full');
         } else {
-            echo '<p class="text-center m-2">Nenhuma imagem foi adicionada.</p>';
+            echo '<p class="text-center m-2 text-terciary-carlos">Nenhuma imagem foi adicionada.</p>';
         }
         ?>
     </section>
     <section class="text-terciary-carlos article-content pt-8 text-sm sm:text-base">
         <?php the_content('full'); ?>
     </section>
+
 </article>
 <?php get_footer(); ?>

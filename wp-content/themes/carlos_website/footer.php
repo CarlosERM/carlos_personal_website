@@ -11,6 +11,8 @@
     &copy; 2025 Carlos Miranda. Todos os direitos reservados.
 </footer>
 <script src='/wp-content/themes/carlos_website/js/script.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
 </body>
 
 </html>

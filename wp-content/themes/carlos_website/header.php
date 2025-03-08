@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/wp-content/themes/carlos_website/style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-dark.min.css" rel="stylesheet"> -->
     <?php wp_head() ?>
 </head>
 
