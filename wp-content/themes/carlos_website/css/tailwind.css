@@ -138,10 +138,15 @@
   .article-content pre {
     @apply my-4;
   }
+  .article-content p {
+    @apply text-wrap;
+    @apply break-words;
 
-  .article-content p a {
-    @apply text-blue-500
   }
+  .article-content p a {
+    @apply text-blue-500;
+  }
+
   .article-content p a:hover {
     @apply underline;
   }

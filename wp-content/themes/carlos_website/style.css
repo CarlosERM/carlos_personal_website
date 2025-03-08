@@ -1244,6 +1244,11 @@ hr {
   margin-bottom: 1rem;
 }
 
+.article-content p {
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+}
+
 .article-content p a {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity, 1));
